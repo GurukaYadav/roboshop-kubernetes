@@ -1,3 +1,3 @@
 bucket = "terraform-sfiles"
-key    = "terraform/mutable/prod/terraform.tfstate"
+key    = "terraform/containerized/prod/terraform.tfstate"
 region = "us-east-1"
