@@ -46,44 +46,13 @@ RABBITMQ_INSTANCE_TYPE = "t3.micro"
 RABBITMQ_PORT = "5672"
 SSH_PORT = "22"
 
-//LOADBALANCERS
-PUB_PORT = "443"
-PRI_PORT = "80"
+#//LOADBALANCERS
+#PUB_PORT = "443"
+#PRI_PORT = "80"
 
 
 
 
 
 
-//INSTANCE_COUNT
-INSTANCE = {
-  FRONTEND = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
-  }
-  CART = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
 
-  }
-  CATALOGUE = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
-  }
-  USER = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
-  }
-  SHIPPING = {
-    COUNT = 3
-    INSTANCE_TYPE = "t3.medium"
-  }
-  PAYMENT = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
-  }
-  DISPATCH = {
-    COUNT = 2
-    INSTANCE_TYPE = "t3.micro"
-  }
-}
