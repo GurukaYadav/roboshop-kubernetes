@@ -79,7 +79,7 @@ module "rabbitmq" {
 
 
 module "eks" {
-  source = "github.com/r-devops/tf-module-eks"
+  source = "github.com/GurukaYadav/tf-module-eks"
   ENV = var.ENV
   PRIVATE_SUBNET_IDS = module.vpc.PRIVATE_SUBNET_ID
   PUBLIC_SUBNET_IDS  = module.vpc.PUBLIC_SUBNET_ID
