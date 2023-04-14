@@ -81,8 +81,8 @@ module "rabbitmq" {
 module "eks" {
   source = "github.com/GurukaYadav/tf-module-eks"
   ENV = var.ENV
-  PRIVATE_SUBNET_IDS = module.vpc.PRIVATE_SUBNET_ID
-  PUBLIC_SUBNET_IDS  = module.vpc.PUBLIC_SUBNET_ID
+  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+  PUBLIC_SUBNET_ID  = module.vpc.PUBLIC_SUBNET_ID
   DESIRED_SIZE = 2
   MAX_SIZE = 4
   MIN_SIZE = 2
