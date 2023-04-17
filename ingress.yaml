@@ -1,0 +1,23 @@
+# We have created a pod  and a service for the grafana server. To expose it to the outside we need ingress rules(ingress.yaml) , so that it create a alb load balacner controller, and this alb load balcner controller creates a load balcner based on  rules(ingress.yaml).
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prometheus-ingress
+  namespace: prometheus
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: prometheus-grafana
+                port:
+                  number: 80
+
